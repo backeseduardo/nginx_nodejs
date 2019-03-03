@@ -7,7 +7,7 @@ services:
       - 80:80
       - 443:443
     volumes:
-      - ./static:/var/www/html
+      - ./frontend:/var/www/html
       - ./nginx:/etc/nginx/conf.d/
       - ./nginx/log:/var/log/nginx/
       - ./nginx/ssl:/etc/nginx/ssl/
@@ -23,7 +23,7 @@ services:
     environment:
       - NODE_ENV=production
     volumes:
-      - ./:/home/node/app
+      - ./backend:/home/node/app
     ports:
       - 3000:3000
     command: sh -c "npm install --silent && npm start"

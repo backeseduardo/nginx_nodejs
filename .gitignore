@@ -1,3 +1,6 @@
 node_modules
 npm-debug.log
 nginx/log/*
+
+backend/node_modules
+frontend/node_modules
